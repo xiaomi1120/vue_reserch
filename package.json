@@ -1,0 +1,36 @@
+{
+  "name": "quaninxi",
+  "version": "0.0.1",
+  "description": "xinxi\r =====",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.knework.com:quanxinxi.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "amd-optimize": "^0.6.1",
+    "browser-sync": "^2.13.0",
+    "browserify": "^13.3.0",
+    "bulma": "^0.3.0",
+    "font-awesome": "^4.6.3",
+    "glob": "^7.1.1",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.10",
+    "gulp-concat": "^2.6.1",
+    "gulp-header": "^1.8.7",
+    "gulp-less": "^3.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.4",
+    "jquery": "^1.11.3",
+    "mithril": "^0.2.5",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}

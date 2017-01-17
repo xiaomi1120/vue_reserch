@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>系统管理员</title>
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="vendor/bulma/bulma.css" type="text/css">
+
+    <link rel="stylesheet" href="css/admin.min.css" type="text/css">
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<nav class="nav has-shadow admin_menu">
+    <div class="container">
+        <div class="nav-left">
+            <!--<a href="member.html" class="nav-item is-tab is-hidden-mobile is-active">客户管理</a>-->
+            <!--<a href="company.html" class="nav-item is-tab is-hidden-mobile">公司管理</a>-->
+        </div>
+        <div class="nav-center">
+            <a class="nav-item">
+                <b>全信息</b>
+            </a>
+        </div>
+        <span id="nav-toggle" class="nav-toggle">
+             <span></span>
+             <span></span>
+             <span></span>
+        </span>
+        <div id="nav-menu" class="nav-right nav-menu">
+            <a class="nav-item is-tab">
+                <figure class="image is-16x16 person">
+                    <img src="img/person.jpg">
+                </figure>
+                Admin
+            </a>
+            <a class="nav-item is-tab">退出</a>
+        </div>
+    </div>
+</nav>
+<aside class="app_menu menu">
+    <ul class="menu-list">
+        <li>
+            <a class="is-active">
+                <span class="icon"><i class="fa fa-user"></i></span>
+                <span>客户管理</span>
+            </a>
+        </li>
+        <li>
+            <a class="" href="company.html">
+                <span class="icon"><i class="fa fa-home"></i></span>
+                <span>公司管理</span>
+            </a>
+        </li>
+    </ul>
+</aside>
+<section class="app_main">
+    <div class="tile is-parent">
+        <article class="tile is-child">
+            <div class="columns">
+                <div class="column">
+                    <div class="box">
+                        <div class="level">
+                            <div class="level-left">
+                                <ul class="breadcrumb">
+                                    <li>
+                                        <i class="fa fa-fw fa-user"></i>客户列表
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="level-right">
+                                <a href="member_add.html" class="button is-primary is-outlined">
+                                   <span class="icon">
+                                        <i class="fa fa-plus"></i>
+                                   </span>
+                                    <span>新建客户</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column">
+                                <div class="responsive-table">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>客户名称</th>
+                                            <th>公司名称</th>
+                                            <th>公司地址</th>
+                                            <th>法人代表</th>
+                                            <th>状态</th>
+                                            <th>添加日期</th>
+                                            <th>修改日期</th>
+                                            <th>操作</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>张创充</td>
+                                            <td>阿里巴巴有限责任公司</td>
+                                            <td>北京中关村</td>
+                                            <td>马云</td>
+                                            <td><span class="tag is-success">使用中</span></td>
+                                            <td>2015-12-13</td>
+                                            <td>2016-12-13</td>
+                                            <td>
+                                                <a class="button is-success is-outlined is-small" href="member_show.html">查看</a>
+                                                <a class="button is-info is-outlined is-small" href="member_edit.html">编辑</a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+<script src="js/require.js"></script>
+<script data-main>
+    require.config({
+        baseUrl: '',
+        paths: {
+            'mithril':'/vendor/mithril/mithril',
+            'jquery': '/vendor/jquery/jquery'
+        }
+    });
+</script>
+<script>
+    requirejs(["js/admin"],function(admin){
+        admin();
+    });
+</script>
+<!--<script src="js/assets/admin.min.js"></script>-->
+</body>
+</html>
